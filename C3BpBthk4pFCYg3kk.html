@@ -1,0 +1,403 @@
+<html><head><base href="." >
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devsecta - Web Development & Design Agency</title>
+<style>
+:root {
+  --primary: #2A2356;
+  --secondary: #FF6B6B;
+  --light: #f4f4f4;
+  --dark: #1a1a1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: var(--dark);
+}
+
+.header {
+  background: var(--primary);
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-text {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--secondary);
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary), #3a3266);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.hero-content {
+  color: white;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--secondary);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.services {
+  padding: 5rem 0;
+  background: var(--light);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.service-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating-element {
+  animation: float 4s ease-in-out infinite;
+}
+
+.about, .privacy {
+  padding: 8rem 2rem 5rem;
+  background: white;
+}
+
+.about-content, .privacy-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.tech-item {
+  text-align: center;
+  padding: 2rem;
+  background: var(--light);
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+}
+
+.privacy-content h3 {
+  margin: 2rem 0 1rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 3rem auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.checkbox-group input {
+  margin-top: 5px;
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <nav class="container">
+      <div class="logo-container">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+          <path d="M20 0L40 20L20 40L0 20L20 0Z" fill="#FF6B6B"/>
+          <path d="M20 10L30 20L20 30L10 20L20 10Z" fill="#2A2356"/>
+        </svg>
+        <span class="logo-text">Devsecta</span>
+      </div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Transform Your Digital Presence</h1>
+        <p>We craft stunning websites and digital experiences that help businesses grow and succeed in the modern world.</p>
+        <a href="#contact" class="btn">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <svg width="50" height="50" viewBox="0 0 50 50" class="floating-element">
+            <rect width="40" height="30" x="5" y="10" rx="2" fill="#2A2356"/>
+            <rect width="30" height="3" x="10" y="15" rx="1" fill="#FF6B6B"/>
+            <rect width="20" height="3" x="10" y="22" rx="1" fill="#FF6B6B"/>
+          </svg>
+          <h3>Web Design</h3>
+          <p>Beautiful, responsive websites that capture your brand's essence and engage your audience.</p>
+        </div>
+        <div class="service-card">
+          <svg width="50" height="50" viewBox="0 0 50 50" class="floating-element">
+            <path d="M10 10L40 10L25 40Z" fill="#2A2356"/>
+            <circle cx="25" cy="20" r="5" fill="#FF6B6B"/>
+          </svg>
+          <h3>Web Development</h3>
+          <p>Custom web applications and solutions built with the latest technologies and best practices.</p>
+        </div>
+        <div class="service-card">
+          <svg width="50" height="50" viewBox="0 0 50 50" class="floating-element">
+            <circle cx="25" cy="25" r="20" fill="#2A2356"/>
+            <path d="M15 25L22 32L35 18" stroke="#FF6B6B" stroke-width="3" fill="none"/>
+          </svg>
+          <h3>Digital Strategy</h3>
+          <p>Strategic planning and consulting to maximize your online presence and achieve your goals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title">About Devsecta</h2>
+      <div class="about-content">
+        <p>Devsecta is a premier web development agency specializing in creating custom digital solutions that drive business growth. Our team of experienced developers and designers work together to deliver exceptional results for our clients.</p>
+        
+        <div class="tech-stack">
+          <div class="tech-item">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+              <rect width="40" height="40" fill="#2A2356"/>
+              <text x="20" y="25" fill="#FF6B6B" text-anchor="middle" font-size="20">WP</text>
+            </svg>
+            <h3>WordPress</h3>
+            <p>Custom themes and plugins</p>
+          </div>
+          <div class="tech-item">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+              <rect width="40" height="40" fill="#2A2356"/>
+              <text x="20" y="25" fill="#FF6B6B" text-anchor="middle" font-size="20">S</text>
+            </svg>
+            <h3>Shopify</h3>
+            <p>E-commerce solutions</p>
+          </div>
+          <div class="tech-item">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+              <rect width="40" height="40" fill="#2A2356"/>
+              <text x="20" y="25" fill="#FF6B6B" text-anchor="middle" font-size="20">JS</text>
+            </svg>
+            <h3>Node.js</h3>
+            <p>Custom web applications</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" required></textarea>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="sms-consent" required>
+          <label for="sms-consent">I consent to receive SMS messages from Devsecta regarding my inquiry. Message and data rates may apply.</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="privacy-consent" required>
+          <label for="privacy-consent">I have read and agree to the Privacy Policy, and I understand that my information will be handled securely and not shared with third parties.</label>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="privacy" id="privacy">
+    <div class="container">
+      <h2 class="section-title">Privacy Policy</h2>
+      <div class="privacy-content">
+        <p>At Devsecta, we take your privacy seriously. This policy outlines how we collect, use, and protect your personal information.</p>
+        
+        <h3>Information Collection</h3>
+        <p>We collect information you voluntarily provide when contacting us, including name, email, phone number, and message content.</p>
+        
+        <h3>SMS Communications</h3>
+        <p>If you opt-in to SMS communications, we will only use your phone number to respond to your inquiry and provide relevant updates about our services.</p>
+        
+        <h3>Data Protection</h3>
+        <p>Your information is securely stored and never shared with third parties. We implement appropriate security measures to protect your personal data.</p>
+        
+        <h3>Your Rights</h3>
+        <p>You have the right to request access to, correction of, or deletion of your personal information at any time. Contact us to exercise these rights.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Add scroll animation for service cards
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.service-card').forEach((card) => {
+      card.style.opacity = 0;
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'all 0.6s ease-out';
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>
